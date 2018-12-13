@@ -2,9 +2,9 @@ import sys
 from gemmi import cif
 import os
 
-# directory = '../data/data_86_FE_BG'
-directory = "../data/data_86_FE_BG"
-fraction = 1.01
+directory = '../data/data_86_FE_BG'
+# directory = "data/sample"
+fraction = 0.99
 mod_dir = directory+'_'+str(fraction)+'/'
 
 if __name__ == '__main__':

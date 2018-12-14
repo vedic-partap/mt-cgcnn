@@ -249,7 +249,7 @@ def validate(val_loader,
 
     if test:
         star_label = '**'
-        with open(arg.cifpath + '/test_results.csv', 'w') as f:
+        with open(args.cifpath + '/test_results.csv', 'w') as f:
             writer = csv.writer(f)
             for cif_id, targets, preds in zip(test_cif_ids, test_targets,
              test_preds):

@@ -1,4 +1,4 @@
-# Mluti Task Crystal Graph Convolutional Neural Networks (MT-CGCNN)
+# Multi Task Crystal Graph Convolutional Neural Networks (MT-CGCNN)
 
 This repository implements the Multi Task Crystal Graph Convolutional Neural Networks (MT-CGCNN) introduced in our paper titled "[MT-CGCNN: Integrating Crystal Graph Convolutional Neural Network with Multitask Learning for Material Property Prediction](https://arxiv.org/abs/1811.05660)". The model that takes as input a crystal structure and predicts multiple material properties in a multi-task setup.
 
@@ -71,6 +71,11 @@ After training, you will get multiple files in `results` folder present within t
 - `logfile.log`: A complete log of the experiment (useful for DEBUGGING purposes)
 
 The other files are useful to understand how well-trained the model is and can be referred for DEBUGGING purposes. Briefly, the files contain information about the training & validation losses, training & validation errors and also some useful plots.
+
+### Predict a model and find Embeddings
+```bash
+python predict.py <PRE_TRAINED_MODEL.pth.tar> <CIF_FILES_FOLDER>
+```
 
 ## License
 

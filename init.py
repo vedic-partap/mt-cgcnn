@@ -17,23 +17,13 @@ def init(root_dir, save_dir, disable_cuda=False, epochs=40, workers=0, scheduler
 if __name__ == '__main__':
     SAVE_RESULTS = True
 
-<<<<<<< HEAD
     FILEPATH = '../data/data_86_FE_BG/'
     # NOTE: the path should be valid i.e it should be '..results/' and not 'results'. Slashes are important these days
-    SAVEPATH = FILEPATH + 'results_a1/'
+    SAVEPATH = FILEPATH + 'results_a3/'
 
     parser = argparse.ArgumentParser(description='Input integer')
     parser.add_argument('--idx', type=str, help='A counter for the program. This helps in running multiple runs of the experiment with the\
 			same input data and yet store the results in different folders'                                                                                                                                                                                                         , default='0')
-=======
-    FILEPATH = '../data/data_86_FE_BG_0.99/'
-    # NOTE: the path should be valid i.e it should be '..results/' and not 'results'. Slashes are important these days
-    SAVEPATH = FILEPATH + 'results_2/'
-
-    parser = argparse.ArgumentParser(description='Input integer')
-    parser.add_argument('--idx', type=str, help='A counter for the program. This helps in running multiple runs of the experiment with the\
-			same input data and yet store the results in different folders'                                                                     , default='0')
->>>>>>> fd3885b955cae9129b51672619cefb3e2212d313
     args = parser.parse_args()
     # This is done so that we have a provision to save results uniquely for independent runs
     SAVEPATH = SAVEPATH + args.idx + '/'
@@ -59,19 +49,11 @@ if __name__ == '__main__':
     RANDOM_SPLITS = [887, 212, 136, 998, 975]
 
     # Set the params here
-<<<<<<< HEAD
     step = 0.01
     decay = 0
-    conv_layer = 4
-    n_hp = 3
-    epochs = 300
-=======
-    step = 0.001
-    decay = 0
-    conv_layer = 1
-    n_hp = 1
-    epochs = 1000
->>>>>>> fd3885b955cae9129b51672619cefb3e2212d313
+    conv_layer = 6
+    n_hp = 5
+    epochs = 500
     optimizer = 'Adam'
     workers = 0
     metric = 'mae'
@@ -79,11 +61,7 @@ if __name__ == '__main__':
     batch_size = 256
     atom_fea_len = 64
     h_fea_len = 32
-<<<<<<< HEAD
     weights = [5,1]
-=======
-    weights = None
->>>>>>> fd3885b955cae9129b51672619cefb3e2212d313
     dropout = 0
     seed = RANDOM_SPLITS[int(args.idx) % 5] # random.randint(0,1000)
 
